@@ -1,8 +1,9 @@
-import { login, logout } from './login';
+import { login, register, logout } from './login';
 import { updateSettings } from './updateSettings';
 
 // Check if form exists on page
 const loginForm = document.querySelector('.form--login');
+const registerForm = document.querySelector('.form--register');
 const logoutButton = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
@@ -13,6 +14,17 @@ if (loginForm) {
 		const email = document.getElementById('email').value;
 		const password = document.getElementById('password').value;
 		login(email, password);
+	});
+}
+
+if (registerForm) {
+	document.querySelector('.form').addEventListener('submit', (e) => {
+		e.preventDefault();
+		const username = document.getElementById('name').value;
+		const email = document.getElementById('email').value;
+		const password = document.getElementById('password').value;
+		const confirmpassword = document.getElementById('passwordConfirm').value;
+		register(username, email, password, confirmpassword);
 	});
 }
 

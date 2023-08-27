@@ -2139,6 +2139,28 @@
       showAlert("error", err.response.data.message);
     }
   };
+  var register = async (name, email, password, passwordConfirm) => {
+    try {
+      const res = await axios_default({
+        method: "POST",
+        url: "/api/v1/users/signup",
+        data: {
+          name,
+          email,
+          password,
+          passwordConfirm
+        }
+      });
+      if (res.data.status === "success") {
+        showAlert("success", "Registered successfully!");
+        window.setTimeout(() => {
+          location.assign("/");
+        }, 500);
+      }
+    } catch (err) {
+      showAlert("error", err.response.data.message);
+    }
+  };
   var logout = async () => {
     try {
       const res = await axios_default({
@@ -2163,6 +2185,9 @@
       });
       if (res.data.status === "success") {
         showAlert("success", `Your ${type} was updated successfully!`);
+        window.setTimeout(() => {
+          location.assign("/me");
+        }, 500);
       }
     } catch (err) {
       showAlert("error", err.response.data.message);
@@ -2171,6 +2196,7 @@
 
   // public/js/index.js
   var loginForm = document.querySelector(".form--login");
+  var registerForm = document.querySelector(".form--register");
   var logoutButton = document.querySelector(".nav__el--logout");
   var userDataForm = document.querySelector(".form-user-data");
   var userPasswordForm = document.querySelector(".form-user-password");
@@ -2180,6 +2206,16 @@
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
       login(email, password);
+    });
+  }
+  if (registerForm) {
+    document.querySelector(".form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmpassword = document.getElementById("passwordConfirm").value;
+      register(username, email, password, confirmpassword);
     });
   }
   if (logoutButton) {

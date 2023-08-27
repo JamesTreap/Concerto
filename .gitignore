@@ -7,7 +7,7 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
-# Environmental variables
+# Store environmental variables
 config.env
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
