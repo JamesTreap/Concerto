@@ -1,7 +1,22 @@
 extends base
 
 block content
+    link(href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+
+    section#hero
+        .hero-content
+            h1
+                span Music Festival
+                br
+                | Find Concerts Near You
+            div
+                a.btn-get-started.scrollto(href='#about') Book Now
     main.main
+        #about
+            h2 About 
+
+        h2 Upcoming Shows
         .card-container
             each tour in tours
                 .card
@@ -38,5 +53,5 @@ block content
                             span.card__footer-text per person 
                         p.card__ratings
                             span.card__footer-value= tour.ratingsAverage
-                            span.card__footer-text= ` rating (${tour.ratingsQuantity})`
+                            span.card__footer-text= ` rating (${tour.ratingsQuantity} ratings)`
                         a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
