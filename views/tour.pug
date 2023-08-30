@@ -3,8 +3,10 @@ extends base
 //- include a mixin
 include __reviewCard
 
-//- block append head
-//-     script(defer src='/js/mapbox.js')
+block append head
+    link(rel='stylesheet' href='/css/mapstyle.css')
+    script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js')
+    script(src='/js/leaflet.js' defer)
 
 //- another mixin - smaller, so keep it in the file
 mixin overviewBox(label, text, icon)
