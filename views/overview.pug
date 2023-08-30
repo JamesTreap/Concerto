@@ -9,49 +9,81 @@ block content
             h1
                 span Music Festival
                 br
-                | Find Concerts Near You
+                | Get Tickets to Concerts Near You
             div
                 a.btn-get-started.scrollto(href='#about') Book Now
     main.main
+        #upcoming
+            h2 Tours & Events
+            each tour in toptours
+                h1= tour.name
+
         #about
+            img(src="/img/backgrounds/dj-club.jpg")
             h2 About 
 
-        h2 Upcoming Shows
-        .card-container
-            each tour in tours
-                .card
-                    .card__header
-                        .card__picture
-                            .card__picture-overlay &nbsp;
-                            img.card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
-                        h3.heading-tertirary
-                            span= tour.name
 
-                    .card__details
-                        h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-day tour`
-                        p.card__text= tour.summary
-                        .card__data
-                            svg.card__icon
-                                use(xlink:href='/img/icons.svg#icon-map-pin')
-                            span= tour.startLocation.description
-                        .card__data
-                            svg.card__icon
-                                use(xlink:href='/img/icons.svg#icon-calendar')
-                            span= tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
-                        .card__data
-                            svg.card__icon
-                                use(xlink:href='/img/icons.svg#icon-flag')  
-                            span= `${tour.locations.length}`
-                        .card__data
-                            svg.card__icon
-                                use(xlink:href='/img/icons.svg#icon-user')
-                            span= `${tour.maxGroupSize} people`
+        h2.center Upcoming Shows
+        each tour in tours
+            a.concert__item(href=`/tour/${tour.slug}`)
+                    .concert__picture
+                        .concert__picture-overlay &nbsp;
+                        img.concert__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+                    h3.concert-heading
+                        span= tour.name
+                    .concert__details
+                        .concert__wrapper
+                            h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-day event`
+                            p.card__text= tour.summary
+                            .card__data
+                                svg.card__icon
+                                    use(xlink:href='/img/icons.svg#icon-map-pin')
+                                span= `Location: ${tour.startLocation.description}`
+                            .card__data
+                                svg.card__icon
+                                    use(xlink:href='/img/icons.svg#icon-calendar')
+                                span= `Date: ${tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'})}`
+                            .card__data                 
+                                svg.card__icon
+                                    use(xlink:href='/img/icons.svg#icon-user')
+                                span= `Seats: ${tour.maxGroupSize}`
+                    .concert__prices
+                        h4.card__sub-heading= `Price: + $${tour.price}`
+                        button.btn-get-started Book Now
+        //- .card-container
+        //-     each tour in tours
+        //-         .card
+        //-             .card__header
+        //-                 .card__picture
+        //-                     .card__picture-overlay &nbsp;
+        //-                     img.card__picture-img(src=`/img/tours/${tour.imageCover}`, alt=`${tour.name}`)
+        //-                 h3.heading-tertirary
+        //-                     span= tour.name
+        //-             .card__details
+        //-                 h4.card__sub-heading= `${tour.difficulty} ${tour.duration}-day tour`
+        //-                 p.card__text= tour.summary
+        //-                 .card__data
+        //-                     svg.card__icon
+        //-                         use(xlink:href='/img/icons.svg#icon-map-pin')
+        //-                     span= tour.startLocation.description
+        //-                 .card__data
+        //-                     svg.card__icon
+        //-                         use(xlink:href='/img/icons.svg#icon-calendar')
+        //-                     span= tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric'})
+        //-                 .card__data
+        //-                     svg.card__icon
+        //-                         use(xlink:href='/img/icons.svg#icon-flag')  
+        //-                     span= `${tour.locations.length}`
+        //-                 .card__data
+        //-                     svg.card__icon
+        //-                         use(xlink:href='/img/icons.svg#icon-user')
+        //-                     span= `${tour.maxGroupSize} people`
 
-                    .card__footer
-                        p
-                            span.card__footer-value= `$${tour.price} `
-                            span.card__footer-text per person 
-                        p.card__ratings
-                            span.card__footer-value= tour.ratingsAverage
-                            span.card__footer-text= ` rating (${tour.ratingsQuantity} ratings)`
-                        a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
+        //-             .card__footer
+        //-                 p
+        //-                     span.card__footer-value= `$${tour.price} `
+        //-                     span.card__footer-text per person 
+        //-                 p.card__ratings
+        //-                     span.card__footer-value= tour.ratingsAverage
+        //-                     span.card__footer-text= ` rating (${tour.ratingsQuantity} ratings)`
+        //-                 a.btn.btn--green.btn--small(href=`/tour/${tour.slug}`) Details
