@@ -8,10 +8,9 @@ const map = L.map('map', {
 	zoomControl: false,
 });
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-	attribution:
-		'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-}).addTo(map);
+L.tileLayer(
+	'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png'
+).addTo(map);
 
 locations.forEach((loc) => {
 	points.push([loc.coordinates[1], loc.coordinates[0]]);

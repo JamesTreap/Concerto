@@ -44,8 +44,8 @@
 	display: block;
 }
 .leaflet-marker-icon {
-	-webkit-filter: drop-shadow(0px 15px 5px #8828e7) !important;
-	filter: drop-shadow(0px 10px 5px #8828e7) !important;
+	-webkit-filter: drop-shadow(0px 15px 5px #e91e63) !important;
+	filter: drop-shadow(0px 10px 5px #e91e63) !important;
 }
 
 /* .leaflet-container svg: reset svg max-width decleration shipped in Joomla! (joomla.org) 3.x */
@@ -378,17 +378,14 @@ svg.leaflet-image-layer.leaflet-interactive path {
 	width: 44px;
 	height: 44px;
 }
-.leaflet-control-layers .leaflet-control-layers-list,
-.leaflet-control-layers-expanded .leaflet-control-layers-toggle {
-	/* display: none; */
-}
+
 .leaflet-control-layers-expanded .leaflet-control-layers-list {
 	display: block;
 	position: relative;
 }
 .leaflet-control-layers-expanded {
 	padding: 6px 10px 6px 6px;
-	color: #333;
+	color: #1b1b1b;
 	background: #fff;
 }
 .leaflet-control-layers-scrollbar {
@@ -424,8 +421,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 }
 .leaflet-control-attribution,
 .leaflet-control-scale-line {
-	padding: 0 5px;
-	color: #333;
+	display: none;
 }
 .leaflet-control-attribution a {
 	text-decoration: none;

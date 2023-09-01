@@ -1,0 +1,248 @@
+/* -----------------------------------
+Hero banner
+------------------------------------- */
+#hero {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: linear-gradient(180deg, transparent 90%, var(--black) 100%),
+		url('../img/herobanner.jpg') no-repeat;
+	background-size: cover;
+}
+
+#hero .hero-content {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: left;
+	bottom: 0;
+	top: 0;
+	right: 0;
+	left: var(--body-padding);
+	z-index: 10;
+}
+
+#hero span {
+	color: var(--white);
+	font-size: 64px;
+	text-transform: uppercase;
+	font-family: 'Russo One', sans-serif;
+	background: -webkit-linear-gradient(var(--grad-peach), var(--grad-pink));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 800px) {
+	#hero h1 {
+		font-size: 22px;
+		padding: 0;
+	}
+}
+
+#hero .btn-get-started {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 10px 32px;
+	margin: 0;
+	background: transparent;
+	border: 1px solid #ff377b;
+	border-radius: 2px;
+	color: #ff377b;
+}
+
+#hero .btn-get-started:hover {
+	background: none;
+	color: var(--black);
+	background: #ff377b;
+	border: 1px solid #ff377b;
+	-webkit-transform: translateY(-3px);
+	transform: translateY(-3px);
+}
+
+/* -----------------------------------
+About section
+------------------------------------- */
+
+#popular {
+	display: grid;
+	column-gap: 4em;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	width: 100%;
+	padding: 3em 5em 5em 0em;
+	margin-bottom: 3em;
+}
+
+.popular-tour {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#popular h1 {
+	margin-bottom: 0px;
+}
+
+#popular h2 {
+	line-height: normal;
+}
+
+#popular h3 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
+#popular h4 {
+	font-size: 1.3em;
+	color: var(#ccc);
+}
+
+#popular a {
+	margin-top: auto;
+	padding-top: 1em;
+	font-size: 1.2em;
+	width: fit-content;
+	text-decoration: dashed underline;
+}
+
+#popular a:hover {
+	-webkit-transform: translateY(var(--button-tran));
+	transform: translateY(var(--button-tran));
+	color: var(--white);
+}
+
+/* -----------------------------------
+Card section
+------------------------------------- */
+.center {
+	text-align: center;
+}
+
+.concert__item {
+	/* background-color: #f7f7f7; */
+	background-color: #000000;
+	color: #aaa;
+	font-weight: 500;
+	height: 15rem;
+	margin-bottom: 1em;
+	display: flex;
+	align-items: center;
+}
+
+.concert__item:hover {
+	-webkit-box-shadow: 0px 0px 20px var(--base-pink);
+	box-shadow: 0px 0px 20px var(--base-pink);
+	transform: scale(1.05, 1.05);
+}
+
+.concert__picture {
+	position: absolute;
+	height: 15rem;
+	width: 28rem;
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 98%);
+	clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+}
+
+.concert__picture-overlay {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		from(var(--grad-peach)),
+		to(var(--grad-pink))
+	);
+	background-image: linear-gradient(
+		to right bottom,
+		var(--grad-peach),
+		var(--grad-pink)
+	);
+}
+
+.concert__picture-img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.concert-heading {
+	color: var(--white);
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 2.75rem;
+	z-index: 10;
+	padding-left: 5%;
+	width: 10.5em;
+}
+
+.concert-heading span {
+	padding: 1rem 1.5rem;
+	line-height: 1;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		from(rgba(255, 192, 138, 0.85)),
+		to(rgba(233, 30, 99, 0.85))
+	);
+	background-image: linear-gradient(
+		to bottom right,
+		rgba(255, 192, 138, 0.85),
+		rgba(233, 30, 99, 0.85)
+	);
+}
+
+.concert__details {
+	/* background-color: var(--white); */
+	/* border-left: 1px solid #f1f1f1; */
+	/* border-right: 1px solid #f1f1f1; */
+	background-color: #080808;
+	border-left: 1px solid #0e0e0e;
+	border-right: 1px solid #0e0e0e;
+	height: 100%;
+	width: 45%;
+	display: flex;
+	align-items: center;
+	padding-left: 2em;
+}
+
+.concert__prices {
+	padding-left: 2em;
+}
+
+.card__sub-heading {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.card__text {
+	font-size: 1.5rem;
+	font-style: italic;
+	margin-top: -1rem;
+	margin-bottom: 0.75rem;
+}
+.card__data {
+	font-size: 1.3rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.card__data svg {
+	margin-right: 0.7rem;
+}
+.card__icon {
+	height: 2rem;
+	width: 2rem;
+	fill: var(--base-pink);
+}
