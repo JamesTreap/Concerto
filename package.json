@@ -13,6 +13,9 @@
 	"author": "James Treap",
 	"license": "ISC",
 	"dependencies": {
+		"@aws-sdk/client-ses": "^3.405.0",
+		"@aws-sdk/credential-provider-node": "^3.405.0",
+		"aws-sdk": "^2.1450.0",
 		"axios": "^1.4.0",
 		"bcryptjs": "^2.4.3",
 		"cookie-parser": "^1.4.6",

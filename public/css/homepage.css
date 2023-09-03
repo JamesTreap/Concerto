@@ -71,7 +71,7 @@ About section
 	column-gap: 4em;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	width: 100%;
-	padding: 3em 5em 5em 0em;
+	padding: 3em 0em 5em 0em;
 	margin-bottom: 3em;
 }
 
@@ -89,15 +89,8 @@ About section
 	line-height: normal;
 }
 
-#popular h3 {
-	font-size: 1.5em;
-	text-transform: uppercase;
-	color: var(--white);
-}
-
 #popular h4 {
 	font-size: 1.3em;
-	color: var(#ccc);
 }
 
 #popular a {
@@ -124,7 +117,7 @@ Card section
 .concert__item {
 	/* background-color: #f7f7f7; */
 	background-color: #000000;
-	color: #aaa;
+	color: #777;
 	font-weight: 500;
 	height: 15rem;
 	margin-bottom: 1em;
@@ -169,6 +162,11 @@ Card section
 	object-fit: cover;
 	height: 100%;
 	width: 100%;
+}
+
+.concert__wrapper {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.3em;
 }
 
 .concert-heading {
@@ -219,18 +217,15 @@ Card section
 }
 
 .card__sub-heading {
-	font-size: 1.2rem;
 	text-transform: uppercase;
-	font-weight: 700;
+	margin-bottom: 0.5em;
 }
 .card__text {
-	font-size: 1.5rem;
 	font-style: italic;
 	margin-top: -1rem;
 	margin-bottom: 0.75rem;
 }
 .card__data {
-	font-size: 1.3rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;

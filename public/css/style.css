@@ -313,6 +313,12 @@ h2 {
 	padding-bottom: 0.5em;
 }
 
+h3 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+	color: var(--white);
+}
+
 h4 {
 	padding-bottom: 5px;
 }
@@ -514,7 +520,6 @@ Main body content
 /* -----------------------------------
 User Page
 ------------------------------------- */
-
 .user-view {
 	background-color: #fff;
 	max-width: 120rem;
