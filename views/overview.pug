@@ -19,7 +19,7 @@ block content
             each tour in toptours
                 .popular-tour
                     h1= tour.name
-                    h3= tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'})
+                    h3= `Date: ${tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'})}`
                     h4= tour.summary
                     a(href=`/tour/${tour.slug}`) Learn More →
 

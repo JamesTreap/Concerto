@@ -39,12 +39,6 @@
 	width: 70%;
 }
 
-.heading-box {
-	position: absolute;
-	top: 10em;
-	margin-left: var(--body-padding);
-}
-
 .heading-box .btn-get-started {
 	font-family: 'Lato', sans-serif;
 	font-size: 15px;

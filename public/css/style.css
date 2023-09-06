@@ -255,6 +255,8 @@ Root
 	--body-padding: 10%;
 	--button-tran: 0.2s;
 	--section-rotate: 9vw;
+	--mobile-width: 480px;
+	--tablet-width: 768px;
 }
 
 *,
@@ -351,14 +353,14 @@ Header
 	background-color: var(--black);
 	padding-left: var(--body-padding);
 	padding-right: var(--body-padding);
-	height: 8rem;
+	min-height: 8rem;
 	z-index: 100;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	display: -webkit-box;
+	display: -webkit-flex;
 	-webkit-box-align: center;
 	-webkit-box-pack: justify;
 
@@ -381,7 +383,7 @@ Header
 
 .section-header {
 	position: relative;
-	height: 38vw;
+	height: 50em;
 	clip-path: polygon(
 		0 0,
 		100% 0,
@@ -483,6 +485,14 @@ Header
 	border-color: #f7f7f7;
 }
 
+@media only screen and (max-width: 600px) {
+	.footer__nav {
+		display: block;
+		margin: 1.5em 0;
+	}
+}
+
+/* Scrollbar customization ---------------------------------- */
 ::-webkit-scrollbar {
 	width: 10px;
 	color: var(--black);
