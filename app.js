@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // 1) Middleware =================================================================
 // Security HTTP headers
-// app.use(helmet());
+app.use(helmet());
 
 // Development Logging
 console.log(process.env.NODE_ENV);
@@ -41,54 +41,36 @@ const limiter = rateLimit({
 app.use('/api', limiter);
 
 // Body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' })); // middleware used here
+app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
 
-// Data sanitization against XSS - usually not needed
+// Data sanitization against XSS
 app.use(xss());
 
 // Prevent parameter pollution - e.g duplicate params
 app.use(
 	hpp({
-		// create a whitelist of fields which we're fine with being duplicated
 		whitelist: ['duration', 'ratingsQuantity', 'price', 'ratingsAverage', 'maxGroupSize', 'difficulty'],
 	})
 );
 
 // Serving static files
-
-// OLD app.use(express.static(`${__dirname}/public`)); // serve static page
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // serve static page
 
 // custom middleware - IMPORTANT: this needs to go above the API requests
-// any api calls above this function will not be handled by this func
-// app.use((req, res, next) => {
-// 	console.log('Hello from the middleware');
-// 	next(); // MUSt call this, or else the middleware gets stuck and doesn't move
-// });
-
 app.use((req, res, next) => {
 	req.requestTime = new Date().toISOString();
-	// console.log(req.cookies);
-	// console.log(req.headers);
+	if (process.env.NODE_ENV === 'production') {
+		console.log(req.cookies);
+		console.log(req.headers);
+	}
+
 	next();
 });
-
-// 2) Route handlers =============================================================
-// see 'routes' file
-
-// :id creates a variable of id based on the url
-// add a ? at the end to make it optional, e.g :id?/:x/:y
-// app.get('/api/v1/tours', getAllTours);
-// app.get('/api/v1/tours/:id', getTour);
-// app.post('/api/v1/tours', createTour);
-// app.patch('/api/v1/tours/:id', updateTour);
-// app.delete('/api/v1/tours/:id', deleteTour);
-// can do it this way or the way showcased below, which is better practices
 
 // 3) API Routes ===================================================================
 app.use('/', viewRouter);
@@ -97,11 +79,6 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
 
 app.all('*', (req, res, next) => {
-	// const err = new Error(`Can't find ${req.originalUrl} on this server!`);
-	// err.status = 'fail';
-	// err.statusCode = 404;
-	// next(err);
-
 	next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
 
