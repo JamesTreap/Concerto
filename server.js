@@ -13,18 +13,37 @@ const app = require('./app'); // must appear after dotenv.config for logging pur
 const DB = process.env.DATABASE.replace('<PASSWORD>', process.env.DATABASE_PASSWORD);
 
 mongoose
+	// can also use .connect(process.env.DATABASE_LOCAL, {
 	.connect(DB, {
 		useNewUrlParser: true,
 		useCreateIndex: true,
 		useFindAndModify: false
 	})
 	.then(() =>
+		// use con instead of () if trying con.connections
+		// console.log(con.connections);
 		console.log('DB connection successful!')
 	);
 
-const port = process.env.PORT || 3000;
-app.set('port', process.env.PORT || 3000);
+// const testTour = new Tour({
+//     name: 'The Forest Hiker',
+//     rating: 4.7,
+//     price: 497,
+// });
 
+// testTour
+//     .save()
+//     .then((doc) => {
+//         console.log(doc);
+//     })
+//     .catch((err) => {
+//         console.log('Error: ' + err);
+//     });
+
+// console.log(process.env); // list all environment variables in nodejs
+// console.log(app.get('env'));
+
+const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
 	console.log(`App running on port ${port}...`);
 });

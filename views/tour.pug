@@ -36,22 +36,22 @@ block content
                         svg.heading-box__icon
                             use(xlink:href='/img/icons.svg#icon-map-pin')
                         span.heading-box__text= `Starts in ${tour.startLocation.description}`
-                a.scrollto(href='#upcoming').btn-get-started See Locations
+                a.scrollto(href='#map').btn-get-started See Locations
 
         section.section-description
             .overview-box
                 div
                     .overview-box__group
-                        h2.heading-secondary.ma-bt-lg Singers
-                        each guide in tour.guides
+                        h2.heading-secondary.ma-bt-lg Performers
+                        each singer in tour.guides
                             .overview-box__detail
-                                img.overview-box__img(src=`/img/users/${guide.photo}`, alt=`guide.name`)
+                                img.overview-box__img(src=`/img/users/${singer.photo}`, alt=`singer.name`)
 
-                                - if (guide.role === 'lead-guide')
-                                    span.overview-box__label Lead singer
-                                - if (guide.role === 'guide')
-                                    span.overview-box__label Guest singer
-                                span.overview-box__text= guide.name
+                                - if (singer.role === 'lead-singer')
+                                    span.overview-box__label Lead Singer
+                                - if (singer.role === 'singer')
+                                    span.overview-box__label Guest Singer
+                                span.overview-box__text= singer.name
 
                     .overview-box__group
                         h2.heading-secondary.ma-bt-lg Event information
@@ -85,7 +85,7 @@ block content
             section.section-cta
                 .cta
                     .cta__img.cta__img--logo
-                        img(src='/img/logo-white.png', alt='Natours logo')
+                        img(src='/img/logo-white.png', alt='Concerto logo')
                     img.cta__img.cta__img--1(src=`/img/tours/${tour.images[1]}`, alt='Tour picture')
                     img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
                     .cta__content

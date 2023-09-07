@@ -192,7 +192,7 @@ Card section
 	font-size: 2.75rem;
 	z-index: 10;
 	padding-left: 5%;
-	width: 10.5em;
+	width: 20%;
 }
 
 .concert-heading span {
@@ -215,14 +215,11 @@ Card section
 }
 
 .concert__details {
-	/* background-color: var(--white); */
-	/* border-left: 1px solid #f1f1f1; */
-	/* border-right: 1px solid #f1f1f1; */
 	background-color: #080808;
 	border-left: 1px solid #0e0e0e;
 	border-right: 1px solid #0e0e0e;
 	height: 100%;
-	width: 45%;
+	width: 55%;
 	display: flex;
 	align-items: center;
 	padding-left: 2em;
