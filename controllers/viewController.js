@@ -53,6 +53,13 @@ exports.getAccount = (req, res) => {
 	});
 };
 
+exports.getAbout = (req, res) => {
+	res.status(200).render('about', {
+		title: 'About Concerto',
+	});
+};
+
+
 exports.updateUserData = catchAsync(async (req, res, next) => {
 	const updatedUser = await User.findByIdAndUpdate(
 		req.user.id,

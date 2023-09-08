@@ -1,0 +1,22 @@
+extends base
+
+block content
+    link(href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
+    link(href='/css/about.css' rel="stylesheet")
+
+    main.main
+        h1
+            span About Concerto
+        p.body-p Concerto is a site made by James Treap.
+            |  Hosted on an AWS EC2 Linux instance with an Elastic IP, and a registered AWS Route 53 domain, it features:
+        br
+        ul.body-p
+            li RESTful API featuring CRUD operations, rate limiting, data sanitization
+            li Data storage and parsing from a MongoDB Atlas Database
+            li Node.js, Express, and Mongoose for server-side processing and request handling
+            li JWT Cookie Token authentication and cookie data handling
+        br
+        p.body-p Disclaimer: Concerto is a project intended to showcase my skills as a developer - it is not a legitimate concert-finding service. Please do not provide sensititive data nor personal information.
+        a.btn-get-started.primary(href="https://www.linkedin.com/in/james-treap" target="_blank") Contact the Creator
+        a.btn-get-started(href="https://github.com/JamesTreap/Concerto" target="_blank") See the Docs

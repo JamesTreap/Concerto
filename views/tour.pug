@@ -84,7 +84,8 @@ block content
                 .reviews-overview
                     h2.heading-secondary.ma-bt-lg What our users are saying 
                     p.description__text Want to know more about the concerts? Learn what people are saying thanks to our helpful users! Click with your mouse and drag to scroll through the reviews on the left to see what people are thinking. Of course, there's nothing better than seeing it in-person yourself. Whether you're an avid fan or looking to try something new, these reviews ought to help you decide whether these concerts are for you.
-                    button.btn-get-started Learn More
+                    a(href="/about")
+                        button.btn-get-started Learn More
 
             .cta
                 .cta__img.cta__img--logo
@@ -93,5 +94,6 @@ block content
                 img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
                 .cta__content
                     h2.heading-secondary What are you waiting for?
-                    p.cta__text= `Performances come and go, but good music is forever. ${tour.duration} chances to see it live.`
-                    button.btn.btn--green.span-all-rows Get tickets now!
+                    p.cta__text= `Performances come and go, but good music is forever. Only ${tour.duration} days to see it live.`
+                    a(href="/about").span-all-rows
+                        button.btn.btn--green Get tickets now!
