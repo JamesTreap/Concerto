@@ -9,6 +9,7 @@ Hero banner
 	background: linear-gradient(180deg, transparent 90%, var(--black) 100%),
 		url('../img/herobanner.jpg') no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 
 #hero .hero-content {
@@ -254,4 +255,54 @@ Card section
 	height: 2rem;
 	width: 2rem;
 	fill: var(--base-pink);
+}
+
+@media only screen and (max-width: 1566px) {
+	.concert__wrapper {
+		padding-left: 10%;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.concert__wrapper {
+		padding-left: 20%;
+	}
+}
+
+@media only screen and (max-width: 1065px) {
+	.concert__wrapper {
+		padding-left: 30%;
+	}
+}
+
+/* mobile view */
+@media only screen and (max-width: 900px) {
+	.concert__picture {
+		position: relative;
+		width: 100%;
+	}
+
+	.concert__item {
+		flex-direction: column;
+		height: 100%;
+		align-items: start;
+		padding-bottom: 2em;
+		margin-bottom: 2em;
+	}
+	
+	.concert-heading {
+		width: 100%;
+		margin-top: -3.5em;
+		margin-bottom: 2em;
+	}
+
+	.concert__wrapper {
+		padding: 0 0 3em 0;
+	}
+
+	.concert__details {
+		background-color: transparent;
+		border: transparent;
+		width: 100%;
+	}
 }

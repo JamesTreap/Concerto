@@ -93,6 +93,12 @@
 	filter: drop-shadow(0 0.75rem 0.5rem rgba(0, 0, 0, 0.25));
 }
 
+@media only screen and (max-width: 414px) {
+	.heading-box__group {
+		flex-direction: column-reverse;
+	}
+}
+
 .section-description {
 	background: linear-gradient(var(--black), #200624c2 60%),
 		url(../img/backgrounds/webb-dark.png);
@@ -167,6 +173,16 @@
 	border-radius: 50%;
 	height: 3.5rem;
 	margin-right: 1.25rem;
+}
+
+@media only screen and (max-width: 706px) {
+	.section-description {
+		flex-direction: column;
+		padding: 4em 0em;
+	}
+	.overview-box {
+		max-width: 100%;
+	}
 }
 
 .section-pictures {
