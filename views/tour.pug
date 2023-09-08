@@ -9,7 +9,6 @@ block append head
     link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
     script(src='https://unpkg.com/leaflet@1.6.0/dist/leaflet.js')
     script(src='/js/leaflet.js' defer)
-    script(src='/js/tourPage.js' type="module" defer)
 
 mixin overviewBox(label, text, icon)
     .overview-box__detail
@@ -77,18 +76,22 @@ block content
             #map(data-locations=`${JSON.stringify(tour.locations)}`)
 
         section.section-pageend
-            section.section-reviews
-                .reviews
-                        each review in tour.reviews
-                            +reviewCard(review)
+            .section-reviews
+                .review-list
+                    .reviews
+                            each review in tour.reviews
+                                +reviewCard(review)
+                .reviews-overview
+                    h2.heading-secondary.ma-bt-lg What our users are saying 
+                    p.description__text Want to know more about the concerts? Learn what people are saying thanks to our helpful users! Click with your mouse and drag to scroll through the reviews on the left to see what people are thinking. Of course, there's nothing better than seeing it in-person yourself. Whether you're an avid fan or looking to try something new, these reviews ought to help you decide whether these concerts are for you.
+                    button.btn-get-started Learn More
 
-            section.section-cta
-                .cta
-                    .cta__img.cta__img--logo
-                        img(src='/img/logo-white.png', alt='Concerto logo', height="110", width="110")
-                    img.cta__img.cta__img--1(src=`/img/tours/${tour.images[1]}`, alt='Tour picture')
-                    img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
-                    .cta__content
-                        h2.heading-secondary What are you waiting for?
-                        p.cta__text= ` ${tour.duration} days. 1 adventure. Infinite memories. Make it yours today!`
-                        button.btn.btn--green.span-all-rows Book tour now!
+            .cta
+                .cta__img.cta__img--logo
+                    img(src='/img/logo-white.png', alt='Concerto logo', height="110", width="110")
+                img.cta__img.cta__img--1(src=`/img/tours/${tour.images[1]}`, alt='Tour picture')
+                img.cta__img.cta__img--2(src=`/img/tours/${tour.images[2]}`, alt='Tour picture')
+                .cta__content
+                    h2.heading-secondary What are you waiting for?
+                    p.cta__text= `Performances come and go, but good music is forever. ${tour.duration} chances to see it live.`
+                    button.btn.btn--green.span-all-rows Get tickets now!

@@ -148,6 +148,29 @@ body {
 	cursor: pointer;
 }
 
+.btn-get-started {
+	font-family: 'Lato', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 10px 32px;
+	margin: 0;
+	background: transparent;
+	border: 1px solid #ff377b;
+	border-radius: 2px;
+	color: #ff377b;
+	transition: var(--button-tran);
+}
+
+.btn-get-started:hover {
+	background: none;
+	color: var(--black);
+	background: #ff377b;
+	border: 1px solid #ff377b;
+	-webkit-transform: translateY(-3px);
+	transform: translateY(-3px);
+}
+
 .btn:hover {
 	-webkit-transform: translateY(-3px);
 	transform: translateY(-3px);
@@ -745,12 +768,13 @@ User Page
 
 .login-form {
 	margin: 0 0 0 auto;
-	max-width: 50rem;
+	max-width: 55rem;
 	background-color: #fff;
 	-webkit-box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
 	box-shadow: 0 2.5rem 8rem 2rem rgba(0, 0, 0, 0.06);
 	padding: 5rem 7rem;
 	border-radius: 0px 5px 5px 0px;
+	min-height: 60em;
 }
 
 .form__input {
