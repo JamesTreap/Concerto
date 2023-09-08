@@ -1,3 +1,5 @@
+
+/* main body section */
 body {
 	line-height: 1.6;
 	font-weight: 300;
@@ -11,6 +13,7 @@ body {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
+	font-display: swap;
 }
 
 .flex {
