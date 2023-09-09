@@ -237,14 +237,6 @@
 	background-color: #343434;
 }
 
-.marker {
-	background-image: url('../img/pin.png');
-	background-size: cover;
-	width: 32px;
-	height: 40px;
-	cursor: pointer;
-}
-
 .section-reviews {
 	display: grid;
 	grid-template-columns: 1.5fr 1fr;

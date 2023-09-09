@@ -2123,7 +2123,7 @@
     try {
       const res = await axios_default({
         method: "POST",
-        url: "/api/v1/users/login",
+        url: "/api/users/login",
         data: {
           email,
           password
@@ -2143,7 +2143,7 @@
     try {
       const res = await axios_default({
         method: "POST",
-        url: "/api/v1/users/signup",
+        url: "/api/users/signup",
         data: {
           name,
           email,
@@ -2165,7 +2165,7 @@
     try {
       const res = await axios_default({
         method: "GET",
-        url: "/api/v1/users/logout"
+        url: "/api/users/logout"
       });
       if (res.data.status = "success")
         location.assign("/");
@@ -2177,7 +2177,7 @@
   // public/js/updateSettings.js
   var updateSettings = async (data, type) => {
     try {
-      const url = type === "password" ? "/api/v1/users/updateMyPassword" : "/api/v1/users/updateMe";
+      const url = type === "password" ? "/api/users/updateMyPassword" : "/api/users/updateMe";
       const res = await axios_default({
         method: "PATCH",
         url,

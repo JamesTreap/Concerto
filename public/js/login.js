@@ -5,7 +5,7 @@ export const login = async (email, password) => {
 	try {
 		const res = await axios({
 			method: 'POST',
-			url: '/api/v1/users/login',
+			url: '/api/users/login',
 			data: {
 				email: email,
 				password: password
@@ -27,7 +27,7 @@ export const register = async (name, email, password, passwordConfirm) => {
 	try {
 		const res = await axios({
 			method: 'POST',
-			url: '/api/v1/users/signup',
+			url: '/api/users/signup',
 			data: {
 				name,
 				email,
@@ -51,7 +51,7 @@ export const logout = async () => {
 	try {
 		const res = await axios({
 			method: 'GET',
-			url: '/api/v1/users/logout'
+			url: '/api/users/logout'
 		});
 		if ((res.data.status = 'success')) location.assign('/');
 	} catch (err) {
