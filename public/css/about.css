@@ -2,7 +2,7 @@
     padding-top: 13em;
 }
 
-span {
+h1 span {
     color: var(--white);
     font-size: 64px;
     text-transform: uppercase;

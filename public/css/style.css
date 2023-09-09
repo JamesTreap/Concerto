@@ -511,7 +511,7 @@ Header
 	border-color: #f7f7f7;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
 	.footer__nav {
 		display: block;
 		margin: 1.5em 0;
@@ -608,7 +608,7 @@ User Page
 	-ms-flex-align: center;
 	align-items: center;
 }
-@media only screen and (max-width: 37.5em) {
+@media screen and (max-width: 37.5em) {
 	.nav__search {
 		-webkit-box-ordinal-group: 0;
 		-ms-flex-order: -1;
@@ -805,18 +805,15 @@ User Page
 .form__input::-webkit-input-placeholder {
 	color: #bbb;
 }
-
 .form__group:not(:last-child) {
 	margin-bottom: 2.5rem;
 }
-
 .form__label {
 	display: block;
 	font-size: 1.6rem;
 	font-weight: 700;
 	margin-bottom: 0.75rem;
 }
-
 .form__photo-upload {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -826,14 +823,12 @@ User Page
 	align-items: center;
 	font-size: 1.6rem;
 }
-
 .form__user-photo {
 	height: 7.5rem;
 	width: 7.5rem;
 	border-radius: 50%;
 	margin-right: 2rem;
 }
-
 .form__upload {
 	width: 0.1px;
 	height: 0.1px;
@@ -842,27 +837,43 @@ User Page
 	position: absolute;
 	z-index: -1;
 }
-
 .form__upload:focus + label {
-	outline: 3px solid #55c57a;
+	outline: 3px solid var(--base-pink);
 	outline-offset: 3px;
 }
-
 .form__upload + label {
 	color: #55c57a;
 	display: inline-block;
 	text-decoration: none;
-	border-bottom: 1px solid #55c57a;
+	border-bottom: 1px solid var(--base-pink);
 	padding: 3px;
 	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	cursor: pointer;
 }
 .form__upload + label:hover {
-	background-color: #55c57a;
+	background-color: var(--base-pink);
 	color: #fff;
 	-webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 	-webkit-transform: translateY(-2px);
 	transform: translateY(-2px);
+}
+
+@media screen and (max-width: 860px) {
+	.login-form {
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+	}
+}
+@media screen and (max-width: 600px){
+	.login-wrapper {
+		width: 100%;
+	}
+	.login-form {
+		padding: 5em 2em;
+	}
+	.ma-bt-lg {
+		padding-bottom: 0px;
+	}
 }

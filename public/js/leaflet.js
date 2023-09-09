@@ -5,7 +5,8 @@ const points = [];
 
 const map = L.map('map', {
 	minZoom: 5,
-	zoomControl: false,
+	zoomControl: true,
+	scrollWheelZoom: false
 });
 
 L.tileLayer(

@@ -1,7 +1,6 @@
 const nodemailer = require('nodemailer');
 const pug = require('pug');
 const { convert } = require('html-to-text');
-const AWS = require('aws-sdk');
 
 module.exports = class Email {
 	constructor(user, url) {
@@ -12,11 +11,6 @@ module.exports = class Email {
 	}
 
 	newTransport() {
-		if (process.env.NODE_ENV === 'production') {
-			// Sendgrid
-			return 1;
-		}
-
 		return nodemailer.createTransport({
 			host: process.env.EMAIL_HOST,
 			port: process.env.EMAIL_PORT,
@@ -51,13 +45,17 @@ module.exports = class Email {
 	}
 
 	async sendWelcome() {
-		await this.send('Welcome', 'Welcome to the Concerto Family!');
+		// await this.send('Welcome', 'Welcome to the Concerto Family!');
+		// CANNOT SEND OUT EMAILS UNTIL AWS ACCEPTS SES REQUEST, DISABLE FEATURE FOR NOW
+		return 1;
 	}
 
 	async sendPasswordReset() {
-		await this.send(
-			'passwordReset',
-			'Your password reset token (valid for 10 minutes)'
-		);
+		// await this.send(
+		// 	'passwordReset',
+		// 	'Your password reset token (valid for 10 minutes)'
+		// );
+		// CANNOT SEND OUT EMAILS UNTIL AWS ACCEPTS SES REQUEST, DISABLE FEATURE FOR NOW
+		return 1;
 	}
 };

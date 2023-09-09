@@ -37,17 +37,22 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = catchAsync(async (req, res, next) => {
-	const newUser = await User.create({
-		name: req.body.name,
-		email: req.body.email,
-		password: req.body.password,
-		passwordConfirm: req.body.passwordConfirm,
-	});
-	const url = `${req.protocol}://${req.get('host')}/me`;
-	// console.log(url);
-	await new Email(newUser, url).sendWelcome();
+	// try to create a new error - if mongoDB returns a duplicate key error, user already exists
+	try {
+		const newUser = await User.create({
+			name: req.body.name,
+			email: req.body.email,
+			password: req.body.password,
+			passwordConfirm: req.body.passwordConfirm,
+		});
 
-	createSendToken(newUser, 201, res);
+		const url = `${req.protocol}://${req.get('host')}/me`;
+		await new Email(newUser, url).sendWelcome();
+		createSendToken(newUser, 201, res);
+
+	} catch (err) {
+		return next(new AppError('Email is already in use!', 401));
+	}
 });
 
 exports.login = catchAsync(async (req, res, next) => {
