@@ -42,7 +42,7 @@ block content
                 div
                     .overview-box__group
                         h2.heading-secondary.ma-bt-lg Performers
-                        each singer in tour.guides
+                        each singer in tour.singers
                             .overview-box__detail
                                 img.overview-box__img(src=`/img/users/${singer.photo}`, height="35", width="35", alt=`singer.name`)
 
@@ -55,7 +55,7 @@ block content
                     .overview-box__group
                         h2.heading-secondary.ma-bt-lg Event information
                         +overviewBox('Next date', tour.startDates[0].toLocaleString('en-us', {month: 'long', year: 'numeric', day: 'numeric'}), 'calendar')
-                        +overviewBox('Genre', tour.difficulty, 'trending-up')
+                        +overviewBox('Genre', tour.genre, 'trending-up')
                         +overviewBox('Concert size', `${tour.maxGroupSize} people`, 'user')
                         +overviewBox('Rating', `${tour.ratingsAverage}`, 'star')
 

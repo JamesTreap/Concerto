@@ -28,7 +28,7 @@ router
 	.get(tourController.getAllTours)
 	.post(
 		authController.protect,
-		authController.restrictTo('admin', 'lead-guide'),
+		authController.restrictTo('admin', 'lead-singer'),
 		tourController.createTour
 	);
 
@@ -37,12 +37,12 @@ router
 	.get(tourController.getTour)
 	.patch(
 		authController.protect,
-		authController.restrictTo('admin', 'lead-guide'),
+		authController.restrictTo('admin', 'lead-singer'),
 		tourController.updateTour
 	)
 	.delete(
 		authController.protect,
-		authController.restrictTo('admin', 'lead-guide'),
+		authController.restrictTo('admin', 'lead-singer'),
 		tourController.deleteTour
 	);
 

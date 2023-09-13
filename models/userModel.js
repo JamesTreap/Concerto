@@ -6,29 +6,29 @@ const bcrypt = require('bcryptjs');
 const userSchema = new mongoose.Schema({
 	name: {
 		type: String,
-		required: [true, 'Please tell us your name!']
+		required: [true, 'Please tell us your name!'],
 	},
 	email: {
 		type: String,
 		required: [true, 'Please provide your email'],
 		unique: true,
 		lowercase: true,
-		validate: [validator.isEmail, 'Please provide a valid email']
+		validate: [validator.isEmail, 'Please provide a valid email'],
 	},
 	photo: {
 		type: String,
-		default: 'default.jpg'
+		default: 'default.jpg',
 	},
 	role: {
 		type: String,
-		enum: ['user', 'guide', 'lead-guide', 'admin'],
-		default: 'user'
+		enum: ['user', 'singer', 'lead-singer', 'admin'],
+		default: 'user',
 	},
 	password: {
 		type: String,
 		required: [true, 'Please provide a password'],
 		minlength: 8,
-		select: false
+		select: false,
 	},
 	passwordConfirm: {
 		type: String,
@@ -38,8 +38,8 @@ const userSchema = new mongoose.Schema({
 			validator: function (el) {
 				return el === this.password;
 			},
-			message: 'Passwords are not the same!'
-		}
+			message: 'Passwords are not the same!',
+		},
 	},
 	passwordChangedAt: Date,
 	passwordResetToken: String,
@@ -47,8 +47,8 @@ const userSchema = new mongoose.Schema({
 	active: {
 		type: Boolean,
 		default: true,
-		select: false
-	}
+		select: false,
+	},
 });
 
 // comment this out when running import data ------------------------------------------
