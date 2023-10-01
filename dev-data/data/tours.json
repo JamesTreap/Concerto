@@ -15,13 +15,13 @@
 			"2021-08-18T09:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2955",
-		"name": "The Sea Explorer",
+		"name": "Keep the Faith",
 		"duration": 7,
-		"maxGroupSize": 15,
+		"maxGroupSize": 1500,
 		"genre": "rock",
 		"singers": ["5c8a22c62f8fb814b56fa18b", "5c8a1f4e2f8fb814b56fa185"],
-		"price": 497,
-		"summary": "Exploring the jaw-dropping US east coast by foot and by boat",
+		"price": 60.99,
+		"summary": "Join us as we transcend into an electrifying realm of beats and melodies",
 		"description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 		"imageCover": "tour-2-cover.jpg",
 		"locations": [
@@ -71,17 +71,17 @@
 			"2021-10-05T09:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2951",
-		"name": "The Forest Hiker",
+		"name": "Electric Forest",
 		"duration": 5,
-		"maxGroupSize": 25,
+		"maxGroupSize": 2500,
 		"genre": "electro",
 		"singers": [
 			"5c8a21d02f8fb814b56fa189",
 			"5c8a201e2f8fb814b56fa186",
 			"5c8a1f292f8fb814b56fa184"
 		],
-		"price": 397,
-		"summary": "Breathtaking hike through the Canadian Banff National Park",
+		"price": 124.99,
+		"summary": "Get ready to dance all night long at the hottest electro/EDM concert in town",
 		"description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 		"imageCover": "tour-1-cover.jpg",
 		"locations": [
@@ -124,17 +124,17 @@
 			"2023-01-06T10:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c295a",
-		"name": "The Snow Adventurer",
+		"name": "Escaping Gravity",
 		"duration": 4,
-		"maxGroupSize": 10,
+		"maxGroupSize": 1170,
 		"genre": "EDM",
 		"singers": [
 			"5c8a21d02f8fb814b56fa189",
 			"5c8a23412f8fb814b56fa18c",
 			"5c8a1f4e2f8fb814b56fa185"
 		],
-		"price": 997,
-		"summary": "Exciting adventure in the snow with snowboarding and skiing",
+		"price": 79.99,
+		"summary": "Brace yourselves for a mind-blowing concert experience that will take your senses to another dimension",
 		"description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
 		"imageCover": "tour-3-cover.jpg",
 		"locations": [
@@ -170,17 +170,17 @@
 			"2022-08-12T09:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2961",
-		"name": "The Park Camper",
+		"name": "Destiny World",
 		"duration": 10,
-		"maxGroupSize": 15,
+		"maxGroupSize": 3215,
 		"genre": "rock",
 		"singers": [
 			"5c8a21f22f8fb814b56fa18a",
 			"5c8a23412f8fb814b56fa18c",
 			"5c8a201e2f8fb814b56fa186"
 		],
-		"price": 1497,
-		"summary": "Breathing in Nature in America's most spectacular National Parks",
+		"price": 69.99,
+		"summary": "Join us for an electrifying night of metal, rock, and electro music that will blow your mind",
 		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
 		"imageCover": "tour-5-cover.jpg",
 		"locations": [
@@ -230,13 +230,13 @@
 			"2021-06-09T09:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c295d",
-		"name": "The City Wanderer",
+		"name": "Have a Nice Day",
 		"duration": 9,
-		"maxGroupSize": 20,
+		"maxGroupSize": 2025,
 		"genre": "electro",
 		"singers": ["5c8a22c62f8fb814b56fa18b", "5c8a201e2f8fb814b56fa186"],
-		"price": 1197,
-		"summary": "Living the life of Wanderlust in the US' most beatiful cities",
+		"price": 149.99,
+		"summary": "Get ready to rock out at Bon Jovi's latest concert!",
 		"description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
 		"imageCover": "tour-4-cover.jpg",
 		"locations": [
@@ -279,17 +279,17 @@
 			"2022-03-18T10:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2966",
-		"name": "The Sports Lover",
+		"name": "Goin' Places",
 		"duration": 14,
-		"maxGroupSize": 8,
+		"maxGroupSize": 800,
 		"genre": "EDM",
 		"singers": [
 			"5c8a21f22f8fb814b56fa18a",
 			"5c8a1f292f8fb814b56fa184",
 			"5c8a1f4e2f8fb814b56fa185"
 		],
-		"price": 2997,
-		"summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
+		"price": 139.99,
+		"summary": "Don't miss the most epic concert experience of the year, featuring a mind-blasting fusion of metal, rock, and electrifying beats",
 		"description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
 		"imageCover": "tour-6-cover.jpg",
 		"locations": [
@@ -346,13 +346,13 @@
 			"2022-01-30T10:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2970",
-		"name": "The Star Gazer",
+		"name": "Mystery Skulls",
 		"duration": 9,
-		"maxGroupSize": 8,
+		"maxGroupSize": 855,
 		"genre": "rock",
 		"singers": ["5c8a21d02f8fb814b56fa189", "5c8a1f292f8fb814b56fa184"],
-		"price": 2997,
-		"summary": "The most remote and stunningly beautiful places for seeing the night sky",
+		"price": 50.99,
+		"summary": "Prepare to be blown away by an insane mix of metal, rock, and electrifying beats",
 		"description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
 		"imageCover": "tour-8-cover.jpg",
 		"locations": [
@@ -395,17 +395,17 @@
 			"2022-12-12T10:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c2974",
-		"name": "The Northern Lights",
+		"name": "The Jackson 5",
 		"duration": 3,
-		"maxGroupSize": 12,
+		"maxGroupSize": 1280,
 		"genre": "electro",
 		"singers": [
 			"5c8a21f22f8fb814b56fa18a",
 			"5c8a201e2f8fb814b56fa186",
 			"5c8a23412f8fb814b56fa18c"
 		],
-		"price": 1497,
-		"summary": "Enjoy the Northern Lights in one of the best places in the world",
+		"price": 34.99,
+		"summary": "Join the crowd, embrace the energy, and let the music take over",
 		"description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
 		"imageCover": "tour-9-cover.jpg",
 		"locations": [
@@ -434,13 +434,13 @@
 			"2021-09-01T09:00:00.000Z"
 		],
 		"_id": "5c88fa8cf4afda39709c296c",
-		"name": "The Wine Taster",
+		"name": "Because We Can",
 		"duration": 5,
-		"maxGroupSize": 8,
+		"maxGroupSize": 800,
 		"genre": "electro",
 		"singers": ["5c8a22c62f8fb814b56fa18b", "5c8a23412f8fb814b56fa18c"],
-		"price": 1997,
-		"summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
+		"price": 25.99,
+		"summary": "An experience that lives through the music",
 		"description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
 		"imageCover": "tour-7-cover.jpg",
 		"locations": [
