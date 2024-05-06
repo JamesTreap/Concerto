@@ -20,11 +20,15 @@ View the project live at [concertomusic.ca](http://concertomusic.ca/).
 -   Stores and parses data (concert information, user data) in a MongoDB Atlas Database
 -   Server-side HTML page and email rendering via Pug templates, delivering responsive and templatized content
 -   API status codes reflecting user input and descriptive success/error authentication messages
--   Deployed to an AWS EC2 Linux instance with an Elastic IP, prerouting with iptables and a registered AWS Route 53 domain
+-   Deployed to an AWS EC2 Linux instance with an Elastic IP, registered AWS Route 53 domain, nginx reverse proxy and SSL certificate
+
+## Setup
+
+Clone the project and install npm dependencies. Rename 'sample.env' to 'config.env' and fill out the corresponding fields.
 
 ## Importing data
 
-Data is stored within the dev-data fodler. To import data, run the following commands from the home directory:
+Data is stored within the dev-data folder. To import data, run the following commands from the home directory:
 
 ```bash
 node .\dev-data\data\import-dev-data.js --delete
@@ -35,7 +39,6 @@ node .\dev-data\data\import-dev-data.js --import
 
 -   Add email sending upon creating an account (once Amazon approves my SES request 🙏)
 -   Add a 'Forgot your password?' page where users can regain access to their account via email.
--   Add an SSL certificate
 -   Add add the ability to comment directly on the page with logged in users rather than strictly via the API. Will need to investigate ways of moderating this, however, before releasing this feature.
 
 ## Authors & Acknowledgements
