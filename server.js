@@ -1,5 +1,8 @@
+const https = require('https');
+const http = require('http');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 // place this high-up so it catches errors quickly
 process.on('uncaughtException', (err) => {
@@ -25,8 +28,22 @@ mongoose
 	);
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
-	console.log(`App running on port ${port}...`);
+
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(
+	{
+		key: fs.readFileSync('client-key.pem'),
+		cert: fs.readFileSync('client-cert.pem'),
+	},
+	app
+);
+
+httpServer.listen(port, () => {
+	console.log(`HTTP Server running on port ${port}`);
+});
+
+httpsServer.listen(443, () => {
+	console.log('HTTPS Server running on port 443');
 });
 
 process.on('unhandledRejection', (err) => {
