@@ -23,7 +23,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // 1) Middleware =================================================================
 // Security HTTP headers
-app.use(helmet());
+// app.use(helmet());
 
 // Development Logging
 console.log(process.env.NODE_ENV);

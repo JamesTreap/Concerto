@@ -27,7 +27,8 @@ mongoose
 		console.log('DB connection successful!')
 	);
 
-const port = process.env.PORT || 3000;
+const http_port = process.env.HTTP_PORT || 3000;
+const https_port = process.env.HTTPS_PORT || 4000;
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(
@@ -38,12 +39,12 @@ const httpsServer = https.createServer(
 	app
 );
 
-httpServer.listen(port, () => {
-	console.log(`HTTP Server running on port ${port}`);
+httpServer.listen(http_port, () => {
+	console.log(`HTTP Server running on port ${http_port}`);
 });
 
-httpsServer.listen(443, () => {
-	console.log('HTTPS Server running on port 443');
+httpsServer.listen(https_port, () => {
+	console.log(`HTTPS Server running on port ${https_port}`);
 });
 
 process.on('unhandledRejection', (err) => {
